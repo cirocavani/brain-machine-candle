@@ -1,0 +1,26 @@
+[package]
+name = "yolo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = { version = "1.0.80", features = ["backtrace"] }
+candle-core = { version = "0.4.0", features = ["metal"] }
+candle-nn = { version = "0.4.0", features = ["metal"] }
+candle-transformers = { version = "0.4.0", features = ["metal"] }
+clap = { version = "4.5.1", features = ["derive"] }
+hf-hub = { version = "0.3.2", features = ["tokio"] }
+image = { version = "0.24.9", default-features = false, features = ["jpeg", "png"] }
+imageproc = { version = "0.23.0", default-features = false }
+rusttype = { version = "0.9.3", default-features = false }
+tracing = "0.1.40"
+tracing-chrome = "0.7.1"
+tracing-subscriber = "0.3.18"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+opt-level = 3
