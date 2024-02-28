@@ -1,6 +1,10 @@
 # Simple Matrix Multiplication
 
-<https://github.com/huggingface/candle/blob/main/README.md#get-started>
+> Candle 0.4.0 git hash
+>
+> <https://github.com/huggingface/candle/tree/6400e1b0a08d594e1448d522a41bddc98c584313>
+
+<https://github.com/huggingface/candle/blob/6400e1b0a08d594e1448d522a41bddc98c584313/README.md#get-started>
 
 ```sh
 mkdir simple_mm

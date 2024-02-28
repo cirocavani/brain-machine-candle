@@ -1,6 +1,10 @@
 # Object Detection - YOLO
 
-<https://github.com/huggingface/candle/tree/main/candle-examples/examples/yolo-v8>
+> Candle 0.4.0 git hash
+>
+> <https://github.com/huggingface/candle/tree/6400e1b0a08d594e1448d522a41bddc98c584313>
+
+<https://github.com/huggingface/candle/tree/6400e1b0a08d594e1448d522a41bddc98c584313/candle-examples/examples/yolo-v8>
 
 ```sh
 mkdir yolo
@@ -16,8 +20,8 @@ opt-level = 3'>> \
 Cargo.toml
 
 # dependencies
-# https://github.com/huggingface/candle/blob/main/candle-examples/Cargo.toml
-# https://github.com/huggingface/candle/blob/main/Cargo.toml
+# https://github.com/huggingface/candle/blob/6400e1b0a08d594e1448d522a41bddc98c584313/candle-examples/Cargo.toml
+# https://github.com/huggingface/candle/blob/6400e1b0a08d594e1448d522a41bddc98c584313/Cargo.toml
 
 cargo add candle-core --features "metal"
 cargo add candle-nn --features "metal"
@@ -46,23 +50,22 @@ rusttype \
 
 # yolo lib
 
-# curl -kLo src/lib_rs.tmp https://github.com/huggingface/candle/row/32544a2ad691fa0fe6e77ade4f5b3232e8d311c1/candle-examples/src/lib.rs
-curl -kLo src/lib.rs https://github.com/huggingface/candle/raw/main/candle-examples/src/lib.rs
-curl -kLo src/coco_classes.rs https://github.com/huggingface/candle/raw/main/candle-examples/src/coco_classes.rs
+curl -kLo src/lib.rs https://github.com/huggingface/candle/raw/6400e1b0a08d594e1448d522a41bddc98c584313/candle-examples/src/lib.rs
+curl -kLo src/coco_classes.rs https://github.com/huggingface/candle/raw/6400e1b0a08d594e1448d522a41bddc98c584313/candle-examples/src/coco_classes.rs
 sed -i '' 's/candle::/candle_core::/;s/, Tensor//;2,3d;29,$d' src/lib.rs
 
 # yolo bin
 
 # curl -kLo src/main_rs.tmp https://github.com/huggingface/candle/raw/5e526abc8c0ecad2bd110a34d128e1e6d5333c68/candle-examples/examples/yolo-v8/main.rs
-curl -kLo src/main.rs https://github.com/huggingface/candle/raw/main/candle-examples/examples/yolo-v8/main.rs
-curl -kLo src/model.rs https://github.com/huggingface/candle/raw/main/candle-examples/examples/yolo-v8/model.rs
+curl -kLo src/main.rs https://github.com/huggingface/candle/raw/6400e1b0a08d594e1448d522a41bddc98c584313/candle-examples/examples/yolo-v8/main.rs
+curl -kLo src/model.rs https://github.com/huggingface/candle/raw/6400e1b0a08d594e1448d522a41bddc98c584313/candle-examples/examples/yolo-v8/model.rs
 sed -i '' '1,6d;s/candle::/candle_core::/;s/candle_examples::/yolo::/' src/main.rs
 sed -i '' 's/candle::/candle_core::/' src/model.rs
 
-curl -kLo src/roboto-mono-stripped.ttf https://github.com/huggingface/candle/raw/main/candle-examples/examples/yolo-v8/roboto-mono-stripped.ttf
+curl -kLo src/roboto-mono-stripped.ttf https://github.com/huggingface/candle/raw/6400e1b0a08d594e1448d522a41bddc98c584313/candle-examples/examples/yolo-v8/roboto-mono-stripped.ttf
 
 mkdir -p input
-curl -kLo input/bike.jpg https://github.com/huggingface/candle/raw/main/candle-examples/examples/yolo-v8/assets/bike.jpg
+curl -kLo input/bike.jpg https://github.com/huggingface/candle/raw/6400e1b0a08d594e1448d522a41bddc98c584313/candle-examples/examples/yolo-v8/assets/bike.jpg
 
 # Running
 

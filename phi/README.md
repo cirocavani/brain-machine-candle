@@ -1,6 +1,10 @@
 # Language Model - Phi
 
-<https://github.com/huggingface/candle/tree/main/candle-examples/examples/phi>
+> Candle 0.4.0 git hash
+>
+> <https://github.com/huggingface/candle/tree/6400e1b0a08d594e1448d522a41bddc98c584313>
+
+<https://github.com/huggingface/candle/tree/6400e1b0a08d594e1448d522a41bddc98c584313/candle-examples/examples/phi>
 
 ```sh
 mkdir phi
@@ -16,8 +20,8 @@ opt-level = 3'>> \
 Cargo.toml
 
 # dependencies
-# https://github.com/huggingface/candle/blob/main/candle-examples/Cargo.toml
-# https://github.com/huggingface/candle/blob/main/Cargo.toml
+# https://github.com/huggingface/candle/blob/6400e1b0a08d594e1448d522a41bddc98c584313/candle-examples/Cargo.toml
+# https://github.com/huggingface/candle/blob/6400e1b0a08d594e1448d522a41bddc98c584313/Cargo.toml
 
 cargo add candle-core --features "metal"
 cargo add candle-nn --features "metal"
@@ -42,14 +46,12 @@ tracing-subscriber \
 
 # phi lib
 
-# curl -kLo src/lib.rs https://github.com/huggingface/candle/row/32544a2ad691fa0fe6e77ade4f5b3232e8d311c1/candle-examples/src/lib.rs
-curl -kLo src/lib.rs https://github.com/huggingface/candle/raw/main/candle-examples/src/lib.rs
+curl -kLo src/lib.rs https://github.com/huggingface/candle/raw/6400e1b0a08d594e1448d522a41bddc98c584313/candle-examples/src/lib.rs
 sed -i '' 's/candle::/candle_core::/;s/, Tensor//;1,4d;30,119d' src/lib.rs
 
 # phi bin
 
-# curl -kLo src/main.rs https://github.com/huggingface/candle/raw/32544a2ad691fa0fe6e77ade4f5b3232e8d311c1/candle-examples/examples/phi/main.rs
-curl -kLo src/main.rs https://github.com/huggingface/candle/raw/main/candle-examples/examples/phi/main.rs
+curl -kLo src/main.rs https://github.com/huggingface/candle/raw/6400e1b0a08d594e1448d522a41bddc98c584313/candle-examples/examples/phi/main.rs
 sed -i '' '1,6d;s/candle::/candle_core::/;s/candle_examples::/phi::/' src/main.rs
 
 # Running
