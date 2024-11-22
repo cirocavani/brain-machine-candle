@@ -1,4 +1,4 @@
-# Robotics Research - Candle (ML framework)
+# Programmable Matter - Candle (ML framework)
 
 <https://github.com/huggingface/candle>
 
