@@ -1,4 +1,4 @@
-# Programmable Matter - Candle (ML framework)
+# Smart Robot - Candle (ML framework)
 
 <https://github.com/huggingface/candle>
 
