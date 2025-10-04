@@ -1,4 +1,4 @@
-# Smart Robot - Candle (ML framework)
+# Brain Machine - Candle (ML framework)
 
 <https://github.com/huggingface/candle>
 
